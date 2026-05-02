@@ -41,6 +41,32 @@
     </div>
   </section>
 
+  <section class="section section-projects" aria-labelledby="projects-heading">
+    <h2 id="projects-heading">Selected projects</h2>
+    <p class="section-lede">
+      Delivery highlights from enterprise platforms—mirroring the selected-project scope from my resume.
+    </p>
+    <div class="projects-bento" @projectsGridEnter>
+      @for (p of projects(); track p.title) {
+        <article
+          class="project-card"
+          [class.project-card--featured]="p.featured === true"
+        >
+          <div class="project-card__accent" aria-hidden="true"></div>
+          <div class="project-card__inner">
+            <div class="project-card__tags">
+              @for (t of p.tags; track t) {
+                <span class="project-tag">{{ t }}</span>
+              }
+            </div>
+            <h3 class="project-card__title">{{ p.title }}</h3>
+            <p class="project-card__desc">{{ p.description }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  </section>
+
   <section class="section" aria-labelledby="experience-heading">
     <h2 id="experience-heading">Experience</h2>
     <div class="timeline">

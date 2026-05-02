@@ -137,6 +137,113 @@
   margin: 0;
 }
 
+.section-lede {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: -0.25rem 0 1.35rem;
+  max-width: 42rem;
+}
+
+.projects-bento {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 700px) {
+  .projects-bento {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card--featured {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .projects-bento {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .project-card--featured {
+    grid-column: span 2;
+  }
+}
+
+.project-card {
+  position: relative;
+  border-radius: 1rem;
+  border: 1px solid var(--line);
+  background: linear-gradient(
+    145deg,
+    oklch(100% 0 0 / 0.92) 0%,
+    color-mix(in oklch, var(--accent) 6%, oklch(99% 0.01 280)) 100%
+  );
+  box-shadow: 0 12px 40px oklch(0% 0 0 / 0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.project-card__accent {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background: var(--glow);
+  opacity: 0.85;
+  flex-shrink: 0;
+}
+
+.project-card__inner {
+  padding: 1.1rem 1.2rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  flex: 1;
+}
+
+.project-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.project-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.45rem;
+  border-radius: 6px;
+  background: color-mix(in oklch, var(--accent) 14%, transparent);
+  color: var(--accent);
+}
+
+.project-card__title {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+}
+
+.project-card__desc {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.55;
+  color: var(--muted);
+}
+
+.project-card--featured .project-card__title {
+  font-size: 1.12rem;
+}
+
+.project-card--featured .project-card__inner {
+  padding: 1.2rem 1.35rem 1.35rem;
+}
+
 .pill-group {
   display: flex;
   flex-wrap: wrap;

@@ -1,17 +1,17 @@
 /**
- * Portfolio copy derived from CV (SaaS / full-stack focus).
+ * Portfolio copy derived from CV (generic no-references resume / PDF).
  * Personal name, references, phone, email, and location are omitted for the public site.
  */
 
 export const GITHUB_REPO_URL = 'https://github.com/LordKay-sudo/portifolio';
 
-export const HERO_HEADLINE = 'Senior full-stack engineer';
+export const HERO_HEADLINE = 'Full-stack engineer';
 
 export const HERO_SUBTITLE =
-  'Angular · Spring · secure APIs · cloud & GenAI integrations';
+  'Angular · Spring · secure APIs · cloud & integrations';
 
 export const SUMMARY =
-  'Software engineer with 5+ years building and supporting production web platforms using Spring Boot, Spring Data JPA, Hibernate, Angular, and relational databases. Delivers secure API-driven services, ERP and operations workflows, and cloud-connected integrations on AWS and GCP. Uses AI-assisted development across implementation, testing, debugging, and documentation. Experience with retrieval-augmented knowledge flows: document ingestion with OCR, vector storage, knowledge bases on Amazon Bedrock, and RAG with Claude for grounded answers over organizational content.';
+  'Full-stack developer with 5+ years building and supporting enterprise web platforms using Spring Boot, Spring Data JPA, Hibernate, Angular, and relational databases. Delivers ERP modules, financial and operations workflows, and secure API-driven integrations across multiple domains—with solid backend architecture, frontend delivery, cloud-enabled deployments, and long-term production support.';
 
 export interface SkillChip {
   readonly title: string;
@@ -45,6 +45,75 @@ export const SKILL_CHIPS: readonly SkillChip[] = [
   { title: 'Python', link: 'https://www.python.org' },
 ];
 
+/** Selected projects — aligned with generic resume (PDF) “Selected Projects”. */
+export interface SelectedProject {
+  readonly title: string;
+  readonly description: string;
+  /** Short labels for the card ribbon (visual only). */
+  readonly tags: readonly string[];
+  /** Larger “feature” tiles on wide screens when true. */
+  readonly featured?: boolean;
+}
+
+export const SELECTED_PROJECTS: readonly SelectedProject[] = [
+  {
+    title: 'Order-to-cash & procure-to-pay',
+    description:
+      'ERP flows for sales and purchase orders—approvals, status traceability, and operational controls in live environments.',
+    tags: ['ERP', 'Workflows'],
+    featured: true,
+  },
+  {
+    title: 'Document-integrated transactions',
+    description:
+      'Order and invoice upload paths tied to approval stages, compliance records, and audit-ready history.',
+    tags: ['Documents', 'Compliance'],
+  },
+  {
+    title: 'Approval & notification automation',
+    description:
+      'Role-based approval pipelines with event-driven email notifications, escalation visibility, and controlled action paths.',
+    tags: ['Automation', 'RBAC'],
+  },
+  {
+    title: 'Cloud-connected integrations',
+    description:
+      'Enterprise workflows wired to GCP-connected components for secure data exchange, automation, and reporting continuity.',
+    tags: ['GCP', 'Integrations'],
+  },
+  {
+    title: 'Logistics & fleet operations',
+    description:
+      'Process modules for dispatch, tracking visibility, and multi-step transport operations in production.',
+    tags: ['Logistics', 'Operations'],
+  },
+  {
+    title: 'RFID & NFC-enabled workflows',
+    description:
+      'RFID and NFC capture integrated into logistics and event-style operations for faster tracking and cleaner data.',
+    tags: ['RFID', 'NFC'],
+  },
+  {
+    title: 'Hardware-assisted inventory',
+    description:
+      'Stock workflows linked to readers, scanners, and weight-linked stations for reliable movement verification.',
+    tags: ['Hardware', 'Inventory'],
+  },
+  {
+    title: 'Multi-tenant operational platforms',
+    description:
+      'Configurable, tenant-aware modules with role-based access and process separation across organizations.',
+    tags: ['Multi-tenant', 'SaaS'],
+    featured: true,
+  },
+  {
+    title: 'Card processing & monitoring',
+    description:
+      'Production support, troubleshooting, and iterative improvements for card transaction processing and monitoring.',
+    tags: ['Payments', 'Support'],
+  },
+];
+
 export interface ExperienceItem {
   readonly title: string;
   readonly period: string;
@@ -58,12 +127,12 @@ export const EXPERIENCE: readonly ExperienceItem[] = [
     period: 'Oct 2020 – present',
     context: 'Enterprise product & services team',
     bullets: [
-      'Design, build, and support full-stack applications with Spring Boot and Angular in production.',
-      'Secure REST APIs, business services, and persistence with Spring Security, JPA, and Hibernate.',
-      'ERP and workflow solutions: accounting, asset and property management, logistics, and stock control.',
-      'Schema evolution and release safety with Flyway-driven migrations.',
-      'Knowledge platform work: OCR pipelines, text extraction, vector storage, Bedrock knowledge bases, and RAG with Claude over ingested documents.',
-      'Cloud integrations on AWS and GCP; performance tuning, defect resolution, and continuous delivery with AI-assisted tooling where appropriate.',
+      'Design, develop, implement, and support full-stack applications with Spring Boot and Angular in production.',
+      'Build and maintain secure REST APIs, business services, and data access with Spring Security, JPA, and Hibernate.',
+      'Deliver ERP and workflow solutions for accounting, asset and property management, logistics, and stock control.',
+      'Implement database schema evolution and release safety using Flyway-driven migrations.',
+      'Integrate AI and OCR capabilities into enterprise document workflows and business process automation.',
+      'Support cloud-connected solutions on AWS and GCP; performance tuning, defect resolution, and feature work in live systems.',
     ],
   },
   {
