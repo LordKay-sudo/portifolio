@@ -1,5 +1,5 @@
 # Builds the Angular app and publishes to GitHub Pages (free for public repos).
-# Repo: https://github.com/LordKay-sudo/portifolio
+# Repo: https://github.com/LordKay-sudo/portfolio
 # After first push: Settings → Pages → Build and deployment → Source: GitHub Actions.
 
 name: Deploy to GitHub Pages

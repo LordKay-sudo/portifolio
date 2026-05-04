@@ -3,7 +3,7 @@
  * Personal name, references, phone, email, and location are omitted for the public site.
  */
 
-export const GITHUB_REPO_URL = 'https://github.com/LordKay-sudo/portifolio';
+export const GITHUB_REPO_URL = 'https://github.com/LordKay-sudo/portfolio';
 
 export const HERO_HEADLINE = 'Full-stack engineer';
 
